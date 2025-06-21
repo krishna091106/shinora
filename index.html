@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="photos/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <title>| Shinora | Home |</title>
+</head>
+
+<body>
+    <nav>
+        <img src="photos/logo.png" alt="logo">
+        <ul>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="#contant">Contant</a>
+        </ul>
+    </nav>
+
+    <div class="home-top fade-element">
+        <h1>Expert Event Decoration for Every Occasion</h1>
+        <a href="#">Check Out Catalog</a>
+    </div>
+
+    <div class="show fade-element">
+        <div class="box">
+            <img src="photos/17_wedding_reception.jpg" alt="" style="border-radius: 12px;">
+            <div class="text-box">
+                <h1>Elegant Wedding Reception Setup</h1>
+                <!-- <a href="">Contant Us</a> -->
+            </div>
+        </div>
+    </div>
+    <hr width="100%">
+    <div class="show fade-element">
+        <div class="box">
+            <div class="text-box">
+                <h1>Luxurious Floral Walkway for Grand Events</h1>
+                <!-- <a href="">Contant Us</a> -->
+            </div>
+            <img src="photos/188_ww.jpg" alt="" style="border-radius: 12px;">
+        </div>
+    </div>
+    <hr width="100%">
+    <div class="show fade-element">
+        <div class="box">
+            <img src="photos/IMGL0879.JPG" alt="" style="border-radius: 12px;">
+            <div class="text-box">
+                <h1>Royal Stage Design with Lighting Decor</h1>
+                <!-- <a href="">Contant Us</a> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="services fade-element">
+        <h1 style="text-align: center; font-size: 50px;">Our Signature Decoration Services</h1>
+        <p style="text-align: center; font-size: 20px; color: #ddd; margin-bottom: 40px;">
+            Explore creative themes, premium decor setups, and unforgettable styling for all events.
+        </p>
+        <div class="services-demo fade-element">
+            <div class="s-img-box">
+                <img src="photos/baby.jpg" alt="">
+                <h1>Baby Shower Theme</h1>
+                <p>Elegant baby-themed decorations with soft colors and playful elements.</p>
+            </div>
+            <div class="s-img-box">
+                <img src="photos/bday.jpg" alt="">
+                <h1>Birthday Celebration</h1>
+                <p>Fun and colorful birthday arrangements for kids, teens, and adults.</p>
+            </div>
+            <div class="s-img-box">
+                <img src="photos/party.jpg" alt="">
+                <h1>Party Decoration</h1>
+                <p>Trendy party setups for engagements, anniversaries, and celebrations.</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="s-bar fade-element">
+        <div class="bar-text">
+            <h1>Why Choose Us?</h1>
+            <p>We deliver custom-designed event setups, on-time service, and creative excellence to make your day
+                memorable.</p>
+            <a href="#">Learn More</a>
+
+        </div>
+        <img src="photos/IMGL1093.JPG" alt="">
+    </div>
+
+    <div class="user-reviews-slider fade-element">
+        <h2>What Our Customers Say</h2>
+
+        <!-- Radio Controls -->
+        <input type="radio" name="review" id="review1" checked>
+        <input type="radio" name="review" id="review2">
+        <input type="radio" name="review" id="review3">
+
+        <div class="review-cards">
+            <div class="user-review r1">
+                <p class="review-text">"Absolutely stunning decorations! Perfectly matched our theme."</p>
+                <div class="rating"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                <p class="review-user">- Komal R.</p>
+            </div>
+
+            <div class="user-review r2">
+                <p class="review-text">"Reliable and professional service. Highly recommended!"</p>
+                <div class="rating"><span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span></div>
+                <p class="review-user">- Rahul M.</p>
+            </div>
+
+            <div class="user-review r3">
+                <p class="review-text">"They transformed the venue into something magical."</p>
+                <div class="rating"><span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span></div>
+                <p class="review-user">- Nisha S.</p>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="review-nav">
+            <label for="review1" class="prev-btn">1</label>
+            <label for="review2" class="next-btn">2</label>
+            <label for="review3" class="next-btn">3</label>
+        </div>
+    </div>
+
+
+    <div class="contant fade-element" id="contant">
+        <h1 class="fade-element" style="font-size: 50px;">Contant Us</h1>
+        <form action="save-data.php" method="post" class="fade-element">
+            Enter your email address*
+            <input type="email" name="email" id="email" placeholder="Your email">
+            Enter your number*
+            <input type="text" name="number" id="number" placeholder="Your number">
+            City Name*
+            <input type="text" name="city" id="city" placeholder="You city">
+            <button type="submit">send</button>
+        </form>
+    </div>
+
+    <script>
+  const fadeElements = document.querySelectorAll('.fade-element');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  fadeElements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+
+</html>

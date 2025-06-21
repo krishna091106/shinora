@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="icon" href="photos/logo.png">
+    <title>| Shinora | Gallery |</title>
+</head>
+
+<body>
+    <nav>
+        <img src="photos/logo.png" alt="logo">
+        <ul>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="#contant">Contant</a>
+        </ul>
+    </nav>
+    <h1 class="gallery-title fade-element">Event Memories Gallery</h1>
+<div class="parent">
+  <div class="div1 fade-element"><img src="photos/17_wedding_reception.jpg" alt=""></div>
+  <div class="div2 fade-element"><img src="photos/188_ww.jpg" alt=""></div>
+  <div class="div3 fade-element"><img src="photos/baby.jpg" alt=""></div>
+  <div class="div4 fade-element"><img src="photos/bday.jpg" alt=""></div>
+  <div class="div5 fade-element"><img src="photos/bday2.jpg" alt=""></div>
+  <div class="div6 fade-element"><img src="photos/IMG_3690.JPG" alt=""></div>
+  <div class="div7 fade-element"><img src="photos/IMGL0879.JPG" alt=""></div>
+  <div class="div8 fade-element"><img src="photos/f1.jpeg" alt=""></div>
+  <div class="div9 fade-element"><img src="photos/f2.jpg" alt=""></div>
+  <div class="div10 fade-element"><img src="photos/DSC_3917.JPG" alt=""></div>
+  <div class="div11 fade-element"><img src="photos/party.jpg" alt=""></div>
+  <!-- <div class="div12 fade-element"><img src="photos/bday3.jpg" alt=""></div> -->
+</div>
+
+<div class="contant fade-element" id="contant">
+        <h1 class="fade-element" style="font-size: 50px;">Contant Us</h1>
+        <form class="fade-element" action="save-data.php" method="post">
+            Enter your email address*
+            <input type="email" name="email" id="email" placeholder="Your email">
+            Enter your number*
+            <input type="text" name="number" id="number" placeholder="Your number">
+            City Name*
+            <input type="text" name="city" id="city" placeholder="You city">
+            <button type="submit">send</button>
+        </form>
+    </div>
+    <script>
+        const fadeElements = document.querySelectorAll('.fade-element');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        fadeElements.forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

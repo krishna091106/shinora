@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="services.css">
+    <link rel="icon" href="photos/logo.png">
+    <title>| Shinora | Services |</title>
+</head>
+
+<body>
+    <nav>
+        <img src="photos/logo.png" alt="logo">
+        <ul>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="#contant">Contant</a>
+        </ul>
+    </nav>
+    <div class="first-text fade-element">
+        <h1>Our Key Event Decoration Services</h1>
+        <p>We specialize in baby showers, birthdays, weddings, and theme-based decorations with elegance and creativity.
+        </p>
+    </div>
+
+
+    <div class="mox fade-element">
+        <div>
+            <div class="boxs fade-element">
+                <img src="photos/baby.jpg" alt="">
+                <h1>Baby Shower Decor</h1>
+                <p>Creative balloon arrangements for any occasion or celebration.</p>
+            </div>
+            <div class="boxs-in-box fade-element">
+                <div class="boxs fade-element">
+                    <img src="photos/f1.jpeg" alt="">
+                    <h1>Flower Decor</h1>
+                    <p>Beautiful floral designs tailored to enhance your event's ambiance.</p>
+                </div>
+                <div class="boxs fade-element">
+                    <img src="photos/f2.jpg" alt="">
+                    <h1>Flower Decor</h1>
+                    <p>Beautiful floral designs tailored to enhance your event's ambiance.</p>
+                </div>
+            </div>
+            <div class="boxs fade-element">
+                <img src="photos/17_wedding_reception.jpg" alt="">
+                <h1>Wedding Backdrop</h1>
+                <p>Elegant floral stage setups with premium lighting and design.</p>
+            </div>
+
+            <div class="boxs-in-box fade-element">
+                <div class="boxs fade-element">
+                    <img src="photos/bday.jpg" alt="">
+                    <h1>Birthday Theme</h1>
+                    <p>Vibrant balloons and cartoon characters for kids birthday parties.</p>
+                </div>
+                <div class="boxs fade-element">
+                    <img src="photos/bday2.jpg" alt="">
+                    <h1>Birthday Theme</h1>
+                    <p>Vibrant balloons and cartoon characters for kids birthday parties.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="user-reviews-slider fade-element">
+        <h2>What Our Customers Say</h2>
+
+        <!-- Radio Controls -->
+        <input type="radio" name="review" id="review1" checked>
+        <input type="radio" name="review" id="review2">
+        <input type="radio" name="review" id="review3">
+
+        <div class="review-cards">
+            <div class="user-review r1">
+                <p class="review-text">"Absolutely stunning decorations! Perfectly matched our theme."</p>
+                <div class="rating"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                <p class="review-user">- Komal R.</p>
+            </div>
+
+            <div class="user-review r2">
+                <p class="review-text">"Reliable and professional service. Highly recommended!"</p>
+                <div class="rating"><span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span></div>
+                <p class="review-user">- Rahul M.</p>
+            </div>
+
+            <div class="user-review r3">
+                <p class="review-text">"They transformed the venue into something magical."</p>
+                <div class="rating"><span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span></div>
+                <p class="review-user">- Nisha S.</p>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="review-nav">
+            <label for="review1" class="prev-btn">1</label>
+            <label for="review2" class="next-btn">2</label>
+            <label for="review3" class="next-btn">3</label>
+        </div>
+    </div>
+
+    <div class="contant fade-element" id="contant">
+        <h1 class="fade-element" style="font-size: 50px;">Contant Us</h1>
+        <form class="fade-element" action="save-data.php" method="post">
+            Enter your email address*
+            <input type="email" name="email" id="email" placeholder="Your email">
+            Enter your number*
+            <input type="text" name="number" id="number" placeholder="Your number">
+            City Name*
+            <input type="text" name="city" id="city" placeholder="You city">
+            <button type="submit">send</button>
+        </form>
+    </div>
+    <div id="map"></div>
+
+    <script>
+        const fadeElements = document.querySelectorAll('.fade-element');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        fadeElements.forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>
